@@ -1,11 +1,1 @@
-md files\
-device.bat
-videoques.py
-engine\cookies.json
-build\
-dist\
-_pycache_
-engine\_pycache_
-contacts.csv
-wisdom.db
-run.spec
+git.gitignore
