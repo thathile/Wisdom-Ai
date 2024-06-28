@@ -219,4 +219,8 @@ body{
   max-width: 80%;
   width: auto;
 }
+
+.settingbtn{
+  color: #FFFFFF !important;
+}
 /* Chat Box Start End*/

@@ -64,18 +64,21 @@
           <div class="col-md-12 mt-1 pt-3">
             <div class="text-center">
               <div id="TextInput" class="d-flex">
-                <input type="text" class="input-field" name="chatbox" id="chatbox" placeholder="Wisdom search">
-                <button id="SendBtn" class="glow-on-hover" hidden><i class="bi bi-send"></i></button>
-                <button id="ExitBtn" class="glow-on-hover" ><i class="bi bi-box-arrow-right cssexitbtn"></i></button>
-                <button id="MicBtn" class="glow-on-hover">
+                <input type="text" class="input-field" name="chatbox" id="chatbox" placeholder="Wisdom search" alt="chatbox">
+                <button id="SendBtn" class="glow-on-hover" alt="sendbtn" hidden><i class="bi bi-send"></i></button>
+                <button id="ExitBtn" class="glow-on-hover" alt="exit"><i class="bi bi-box-arrow-right cssexitbtn"></i></button>
+                <button id="MicBtn" class="glow-on-hover" alt="micbtn">
                   <i class="bi bi-mic-fill"></i>
                 </button>
-                <button id="ChatBtn" class="glow-on-hover" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling">
+                <button id="ChatBtn" class="glow-on-hover" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling" alt="Chat history">
                   <i class="bi bi-chat-dots"></i>
                 </button>
-                <button id="SettingsBtn" class="glow-on-hover">
-                  <i class="bi bi-gear-wide-connected"></i>
+                <!-- make a setting area in this code and make it open from this btn -->
+              <a href="Work-in-process.html">
+                <button id="SettingsBtn" class="glow-on-hover" alt="Work in process">
+                  <i class="bi bi-gear-wide-connected settingbtn"></i>
                 </button>
+              </a>
               </div>
             </div>
           </div>

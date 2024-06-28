@@ -19,13 +19,15 @@ def speak(text):
 
 
 
+
+
 def takecommand():
 
     r = sr.Recognizer()
     t = Translator()
 
     with sr.Microphone() as source:
-        print('listening....')
+        # print('listening....')
         eel.DisplayMessage('listening....')
         r.pause_threshold = 1
         r.adjust_for_ambient_noise(source)
@@ -33,11 +35,11 @@ def takecommand():
         audio = r.listen(source, 10, 6)
 
     try:
-        print('recognizing')
+        # print('recognizing')
         eel.DisplayMessage('recognizing....')
         query = r.recognize_google(audio, language='en-IN')
         # query.lower() = t.translate(query.lower() ,dest='en').text
-        print(f"user said: {query}")
+        # print(f"user said: {query}")
         eel.DisplayMessage(query.lower())
         time.sleep(2)
        
@@ -107,19 +109,27 @@ def allCommand(message=1):
 
         elif "internet speed" in query:
                     import speedtest
+                    from decimal import Decimal,getcontext
+                    getcontext().prec = 6
 
                     try:
                         wifi = speedtest.Speedtest()
                         upload_net = wifi.upload() / 1048576  # Convert to megabytes
                         download_net = wifi.download() / 1048576  # Convert to megabytes
-                        print("Your Wifi Upload speed is", upload_net, "megabytes")
-                        print("Your Wifi Download speed is", download_net, "megabytes")
-                        speak(f"Your Wifi Upload speed is {upload_net} megabytes")
-                        speak(f"Your Wifi Download speed is {download_net} megabytes")
+                        print("Your Wifi Upload speed is", float(upload_net), "megabytes")
+                        print("Your Wifi Download speed is", float(download_net), "megabytes")
+                        speak(f"Your Wifi Upload speed is {float(upload_net)} megabytes")
+                        speak(f"Your Wifi Download speed is {float(download_net)} megabytes")
                     except ModuleNotFoundError:
                         print("The speedtest module is not installed. Install it using 'pip install speedtest-cli'")
                     except Exception as e:
                         print(f"An error occurred: {e}")
+
+        elif "system shutdown" in query:
+                    from pygame import mixer
+                    speak("Ok sir, I am going to sleep")
+                    time.sleep(1)
+                    exit()
 
         # elif "exit" or "system close" or "close now" in query.lower():
         #     from engine.features import exitnow

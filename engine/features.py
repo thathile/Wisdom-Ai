@@ -8,12 +8,14 @@ import eel
 import pyaudio
 import pyautogui
 from engine.config import ASSISTANT_NAME
-from engine.command import speak
+from engine.command import speak, takecommand
 import pywhatkit as kit
 import re
 import webbrowser
 import sqlite3
 import pvporcupine
+from sketchpy import library as lib
+import sketchpy
 
 
 from engine.helper import extract_yt_term, remove_words
@@ -190,7 +192,15 @@ def exitnow():
     elif a == "no" or "NO":
         pass
     else:
-        print("Please write yes or no")
+        print("Please write yes or no") 
+
+# def Draw():
+#     speak("What to draw ?, Sir")
+#     query = takecommand().lower
+#     if query == lib:
+#         obj = query
+#         obj.draw()
+
 
 @eel.expose()
 def htmlexit():

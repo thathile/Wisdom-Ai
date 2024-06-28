@@ -2,22 +2,21 @@ import multiprocessing
 import os
 import sys
 
-def resource_path(relative_path):
-    """ Get absolute path to resource, works for dev and for PyInstaller """
-    base_path = getattr(sys, '_MEIPASS2', os.path.dirname(os.path.abspath(__file__)))
-    return os.path.join(base_path, relative_path)
+
 
 # To run Jarvis
 def startJarvis():
-        # Code for process 1
-        print("Process 1 is running.")
+        #  Code for process 1
+        # print("Process 1 is running.")
+        from engine.db import dbs
+        dbs()
         from main import start
         start()
 
 # To run hotword
 def listenHotword():
         # Code for process 2
-        print("Process 2 is running.")
+        # print("Process 2 is running.")
         from engine.features import hotword
         hotword()
 
@@ -34,4 +33,4 @@ if __name__ == '__main__':
             p2.terminate()
             p2.join()
 
-        print("system stop")
+        # print("system stop")
