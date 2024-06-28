@@ -1,8 +1,7 @@
 /md files
-/device.bat
-/videoques.py
 /engine/cookies.json
 /contacts.csv
 /wisdom.db
 .vscode
-/git.gitignore
+/engine/_pycache_
+_pycache_

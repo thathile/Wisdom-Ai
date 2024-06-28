@@ -64,4 +64,13 @@ Updates till 2024 ends!
 - Export all your contacts in csv file
 - Paste it to "C:\Program Files\W.I.S.D.O.M_A.I"
 
+* At last run the following command :-
+```
+cd your-file-path-to-this-code
+```
+
+```
+python -u run.py
+```
+
 For more information click on this link [Information video](https://www.youtube.com/watch?v=bir7dfWFP0c&t=349)
