@@ -63,6 +63,8 @@ Updates till 2024 ends!
 - Go to google contacts
 - Export all your contacts in csv file
 - Paste it to "C:\Program Files\W.I.S.D.O.M_A.I"
+- now you have to install python from this link
+[Python 3.10.10](https://www.python.org/downloads/release/python-31010/)
 
 * At last run the following command :-
 ```
